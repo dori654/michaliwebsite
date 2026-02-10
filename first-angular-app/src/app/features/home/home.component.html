@@ -1,0 +1,121 @@
+<!-- Hero Section -->
+<app-hero />
+
+<!-- Introduction Section -->
+<section class="intro section">
+  <div class="container">
+    <div class="intro__content">
+      <span class="intro__label text-label">Our Philosophy</span>
+      <h2 class="intro__title">
+        We believe in design that tells a story, spaces that evoke emotion, and details that matter.
+      </h2>
+      <p class="intro__text">
+        Michali Architecture creates distinctive environments for discerning clients worldwide.
+        Our approach combines timeless elegance with contemporary innovation, ensuring each project
+        is as unique as the individuals who inhabit it.
+      </p>
+      <a routerLink="/about" class="intro__link hover-underline">
+        Discover Our Approach
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured section">
+  <div class="container">
+    <header class="featured__header">
+      <span class="featured__label text-label">Selected Work</span>
+      <h2 class="featured__title">Featured Projects</h2>
+    </header>
+
+    <div class="featured__grid">
+      @for (project of portfolioService.featuredProjects(); track project.id; let i = $index) {
+        <a
+          [routerLink]="['/project', project.id]"
+          class="featured__item hover-zoom"
+          [class.featured__item--large]="i === 0"
+        >
+          <div class="featured__image-wrapper">
+            <img
+              [src]="project.thumbnailUrl"
+              [alt]="project.title"
+              class="featured__image"
+              loading="lazy"
+            />
+          </div>
+          <div class="featured__overlay">
+            <span class="featured__category text-label">{{ project.category }}</span>
+            <h3 class="featured__project-title">{{ project.title }}</h3>
+            <p class="featured__location">{{ project.location }}</p>
+          </div>
+        </a>
+      }
+    </div>
+
+    <div class="featured__cta">
+      <a routerLink="/portfolio" class="featured__link hover-underline">
+        View All Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services section">
+  <div class="container">
+    <div class="services__grid">
+      <div class="services__content">
+        <span class="services__label text-label">What We Do</span>
+        <h2 class="services__title">Comprehensive Design Services</h2>
+        <p class="services__text">
+          From initial concept to final installation, we guide our clients through every phase
+          of the design process with meticulous attention to detail.
+        </p>
+      </div>
+
+      <div class="services__list">
+        <div class="services__item">
+          <h3 class="services__item-title">Architecture</h3>
+          <p class="services__item-text">
+            New construction and renovations that harmonize with their surroundings.
+          </p>
+        </div>
+        <div class="services__item">
+          <h3 class="services__item-title">Interior Design</h3>
+          <p class="services__item-text">
+            Thoughtfully curated spaces that reflect your lifestyle and aspirations.
+          </p>
+        </div>
+        <div class="services__item">
+          <h3 class="services__item-title">Furniture & Objects</h3>
+          <p class="services__item-text">
+            Custom pieces and art curation that complete the vision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="cta">
+  <div class="cta__background">
+    <img
+      src="https://picsum.photos/seed/cta/1920/800"
+      alt=""
+      class="cta__image"
+      loading="lazy"
+    />
+  </div>
+  <div class="cta__overlay"></div>
+  <div class="cta__content container">
+    <h2 class="cta__title">Let's Create Something Extraordinary</h2>
+    <p class="cta__text">
+      Every project begins with a conversation. Tell us about your vision.
+    </p>
+    <a routerLink="/contact" class="cta__button">
+      Start a Conversation
+    </a>
+  </div>
+</section>

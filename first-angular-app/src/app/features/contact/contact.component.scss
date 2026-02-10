@@ -1,0 +1,219 @@
+@use 'variables' as *;
+
+.contact-page {
+  padding-top: var(--header-height);
+}
+
+// Header
+.contact-page__header {
+  padding: var(--space-4xl) 0 var(--space-3xl);
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.contact-page__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.contact-page__title {
+  @include heading-style;
+  font-size: clamp(var(--text-4xl), 8vw, var(--text-5xl));
+  margin: 0 0 var(--space-lg);
+}
+
+.contact-page__description {
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+// Content
+.contact-page__content {
+  background-color: var(--color-bg-alt);
+}
+
+.contact-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4xl);
+
+  @include lg {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+// Contact Info
+.contact-page__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.contact-page__info-section {
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.contact-page__info-title {
+  @include label-style;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.contact-page__address {
+  font-style: normal;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+.contact-page__contact-item {
+  margin: 0 0 var(--space-xs);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.contact-page__hours {
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  margin: 0;
+}
+
+// Form
+.contact-page__form-wrapper {
+  background-color: var(--color-bg);
+  padding: var(--space-2xl);
+
+  @include md {
+    padding: var(--space-3xl);
+  }
+}
+
+.contact-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.contact-page__form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-page__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-page__form-label {
+  color: var(--color-text);
+}
+
+.contact-page__form-input,
+.contact-page__form-select,
+.contact-page__form-textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  &::placeholder {
+    color: var(--color-text-light);
+  }
+}
+
+.contact-page__form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232D2926' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-md) center;
+  padding-right: var(--space-2xl);
+  cursor: pointer;
+}
+
+.contact-page__form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-page__form-submit {
+  @include label-style;
+  padding: var(--space-md) var(--space-2xl);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+
+  &:hover {
+    background-color: var(--color-accent);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.contact-page__form-error {
+  color: #c0392b;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-md);
+}
+
+// Success Message
+.contact-page__success {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.contact-page__success-title {
+  @include heading-style;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-page__success-text {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}

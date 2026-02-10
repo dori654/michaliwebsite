@@ -1,0 +1,33 @@
+@if (themeService.menuOpen()) {
+  <div class="nav-overlay" @menuOverlay>
+    <nav class="nav-overlay__nav">
+      <ul class="nav-overlay__list">
+        @for (item of themeService.navItems; track item.path; let i = $index) {
+          <li
+            class="nav-overlay__item"
+            [style.animation-delay]="(i * 0.1) + 's'"
+          >
+            <a
+              [routerLink]="item.path"
+              routerLinkActive="nav-overlay__link--active"
+              [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+              class="nav-overlay__link"
+              (click)="themeService.closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <footer class="nav-overlay__footer">
+      <p class="nav-overlay__contact">
+        <a href="mailto:michali95z1@gmail.com">michali95z1&#64;gmail.com</a>
+      </p>
+      <p class="nav-overlay__copyright">
+        &copy; {{ currentYear }} Michali Architecture
+      </p>
+    </footer>
+  </div>
+}

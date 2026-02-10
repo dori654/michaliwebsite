@@ -1,0 +1,151 @@
+@use 'variables' as *;
+
+.about-page__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.about-page__section-title {
+  @include heading-style;
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  margin-bottom: var(--space-xl);
+}
+
+.about-page__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-lg);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Hero Section
+.about-page__hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.about-page__hero-image-wrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.about-page__hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-page__hero-overlay {
+  @include overlay(0.4);
+}
+
+.about-page__hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-3xl);
+}
+
+.about-page__title {
+  @include heading-style;
+  font-size: clamp(var(--text-4xl), 8vw, var(--text-5xl));
+  color: var(--color-text-inverse);
+  margin: 0;
+}
+
+// Philosophy Section
+.about-page__philosophy {
+  background-color: var(--color-bg);
+}
+
+.about-page__philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+  }
+}
+
+.about-page__philosophy-image {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Approach Section
+.about-page__approach {
+  background-color: var(--color-bg-alt);
+}
+
+.about-page__approach-header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.about-page__approach-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about-page__approach-item {
+  text-align: center;
+  padding: var(--space-xl);
+
+  @include lg {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.about-page__approach-number {
+  @include heading-style;
+  font-size: var(--text-4xl);
+  color: var(--color-border-dark);
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.about-page__approach-title {
+  @include heading-style;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-md);
+}
+
+.about-page__approach-text {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+// Team Section
+.about-page__team {
+  background-color: var(--color-bg);
+}
+
+.about-page__team-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}

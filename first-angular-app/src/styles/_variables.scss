@@ -1,0 +1,224 @@
+// ============================================
+// DESIGN SYSTEM VARIABLES
+// Luxury Architecture Firm - Inspired by bamo.com
+// ============================================
+
+:root {
+  // ----------------------------------------
+  // TYPOGRAPHY
+  // ----------------------------------------
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  // Typography Scale
+  --text-xs: 0.75rem;      // 12px
+  --text-sm: 0.875rem;     // 14px
+  --text-base: 1rem;       // 16px
+  --text-lg: 1.125rem;     // 18px
+  --text-xl: 1.25rem;      // 20px
+  --text-2xl: 1.5rem;      // 24px
+  --text-3xl: 2rem;        // 32px
+  --text-4xl: 2.5rem;      // 40px
+  --text-5xl: 3rem;        // 48px
+  --text-hero: clamp(2.5rem, 8vw, 5rem);
+
+  // Line Heights
+  --leading-tight: 1.2;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+
+  // Letter Spacing
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.2em;
+
+  // ----------------------------------------
+  // COLORS (Luxury Palette)
+  // ----------------------------------------
+
+  // Primary Colors
+  --color-bg: #FFFAF2;           // Warm cream background
+  --color-bg-alt: #F5F0E8;       // Slightly darker cream
+  --color-bg-dark: #2D2926;      // Dark sections
+
+  // Text Colors
+  --color-text: #2D2926;         // Near-black (softer than pure black)
+  --color-text-muted: #5A5653;   // Muted text
+  --color-text-light: #8A8582;   // Light text
+  --color-text-inverse: #FFFAF2; // Light text on dark backgrounds
+
+  // Accent Colors
+  --color-accent: #B8860B;       // Muted gold/bronze
+  --color-accent-hover: #9A7209; // Darker gold for hover
+
+  // Overlays
+  --color-overlay: rgba(45, 41, 38, 0.7);
+  --color-overlay-light: rgba(45, 41, 38, 0.4);
+
+  // Borders
+  --color-border: rgba(45, 41, 38, 0.1);
+  --color-border-dark: rgba(45, 41, 38, 0.2);
+
+  // ----------------------------------------
+  // SPACING
+  // ----------------------------------------
+  --space-xs: 0.25rem;    // 4px
+  --space-sm: 0.5rem;     // 8px
+  --space-md: 1rem;       // 16px
+  --space-lg: 1.5rem;     // 24px
+  --space-xl: 2rem;       // 32px
+  --space-2xl: 3rem;      // 48px
+  --space-3xl: 4rem;      // 64px
+  --space-4xl: 6rem;      // 96px
+  --space-5xl: 8rem;      // 128px
+
+  // Section Spacing
+  --section-padding-y: clamp(4rem, 10vh, 8rem);
+  --section-padding-x: clamp(1.5rem, 5vw, 4rem);
+
+  // ----------------------------------------
+  // LAYOUT
+  // ----------------------------------------
+  --container-max: 1400px;
+  --container-narrow: 800px;
+  --header-height: 80px;
+  --header-height-mobile: 60px;
+
+  // ----------------------------------------
+  // TRANSITIONS (Luxury = Slow & Smooth)
+  // ----------------------------------------
+  --ease-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --transition-fast: 0.2s var(--ease-out-smooth);
+  --transition-medium: 0.4s var(--ease-out-smooth);
+  --transition-slow: 0.6s var(--ease-out-smooth);
+  --transition-slower: 0.8s var(--ease-out-smooth);
+  --transition-slowest: 1s var(--ease-in-out-smooth);
+
+  // ----------------------------------------
+  // SHADOWS
+  // ----------------------------------------
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  // ----------------------------------------
+  // Z-INDEX SCALE
+  // ----------------------------------------
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-header: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+
+  // ----------------------------------------
+  // BORDER RADIUS
+  // ----------------------------------------
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+}
+
+// ============================================
+// SCSS MIXINS
+// ============================================
+
+// Responsive Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+@mixin sm {
+  @media (min-width: $breakpoint-sm) { @content; }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) { @content; }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) { @content; }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) { @content; }
+}
+
+@mixin xxl {
+  @media (min-width: $breakpoint-2xl) { @content; }
+}
+
+// Typography Mixins
+@mixin heading-style {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+@mixin body-style {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+}
+
+@mixin label-style {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+// Layout Mixins
+@mixin container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+}
+
+@mixin full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+// Transition Mixins
+@mixin smooth-transition($properties: all) {
+  transition-property: $properties;
+  transition-duration: 0.6s;
+  transition-timing-function: var(--ease-out-smooth);
+}
+
+// Overlay Mixin
+@mixin overlay($opacity: 0.7) {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(45, 41, 38, $opacity);
+}
+
+// Focus Styles
+@mixin focus-ring {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+// Hide Scrollbar
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

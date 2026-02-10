@@ -1,0 +1,41 @@
+<section class="hero">
+  <!-- Background Images -->
+  <div class="hero__slides">
+    @for (slide of slides; track slide.imageUrl; let i = $index) {
+      <div
+        class="hero__slide"
+        [class.hero__slide--active]="i === currentIndex()"
+        [style.background-image]="'url(' + slide.imageUrl + ')'"
+      ></div>
+    }
+  </div>
+
+  <!-- Overlay -->
+  <div class="hero__overlay"></div>
+
+  <!-- Content -->
+  <div class="hero__content">
+    <h1 class="hero__title" @fadeUp>
+      <span class="hero__title-line">{{ currentSlide().title }}</span>
+      <span class="hero__title-line hero__title-line--accent">{{ currentSlide().subtitle }}</span>
+    </h1>
+
+    <!-- Slide Indicators -->
+    <div class="hero__indicators">
+      @for (slide of slides; track slide.imageUrl; let i = $index) {
+        <button
+          class="hero__indicator"
+          [class.hero__indicator--active]="i === currentIndex()"
+          (click)="goToSlide(i)"
+          [attr.aria-label]="'Go to slide ' + (i + 1)"
+        ></button>
+      }
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="hero__scroll-indicator">
+    <span class="hero__scroll-text">Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>

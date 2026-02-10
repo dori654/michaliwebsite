@@ -1,0 +1,110 @@
+@if (project(); as proj) {
+  <main class="project-detail">
+    <!-- Hero Section -->
+    <section class="project-detail__hero">
+      <img
+        [src]="proj.heroImageUrl"
+        [alt]="proj.title"
+        class="project-detail__hero-image"
+      />
+      <div class="project-detail__hero-overlay"></div>
+      <div class="project-detail__hero-content container">
+        <span class="project-detail__category text-label">{{ proj.category }}</span>
+        <h1 class="project-detail__title">{{ proj.title }}</h1>
+        @if (proj.subtitle) {
+          <p class="project-detail__subtitle">{{ proj.subtitle }}</p>
+        }
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="project-detail__content section">
+      <div class="container">
+        <div class="project-detail__grid">
+          <!-- Left Column - Info (Sticky) -->
+          <aside class="project-detail__info">
+            <div class="project-detail__info-inner">
+              <div class="project-detail__meta">
+                <div class="project-detail__meta-item">
+                  <span class="project-detail__meta-label text-label">Location</span>
+                  <span class="project-detail__meta-value">{{ proj.location }}</span>
+                </div>
+                <div class="project-detail__meta-item">
+                  <span class="project-detail__meta-label text-label">Year</span>
+                  <span class="project-detail__meta-value">{{ proj.year }}</span>
+                </div>
+                <div class="project-detail__meta-item">
+                  <span class="project-detail__meta-label text-label">Category</span>
+                  <span class="project-detail__meta-value project-detail__meta-value--capitalize">
+                    {{ proj.category }}
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-detail__description">
+                <h2 class="project-detail__description-title">About the Project</h2>
+                <p class="project-detail__description-text">{{ proj.description }}</p>
+              </div>
+
+              <a routerLink="/portfolio" class="project-detail__back hover-underline">
+                &larr; Back to Portfolio
+              </a>
+            </div>
+          </aside>
+
+          <!-- Right Column - Images (Scrolling) -->
+          <div class="project-detail__gallery">
+            @for (image of proj.images; track image.url) {
+              <figure class="project-detail__gallery-item">
+                <img
+                  [src]="image.url"
+                  [alt]="image.alt"
+                  class="project-detail__gallery-image"
+                  loading="lazy"
+                />
+              </figure>
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Projects -->
+    @if (relatedProjects().length > 0) {
+      <section class="project-detail__related section">
+        <div class="container">
+          <h2 class="project-detail__related-title">Related Projects</h2>
+          <div class="project-detail__related-grid">
+            @for (related of relatedProjects(); track related.id) {
+              <a
+                [routerLink]="['/project', related.id]"
+                class="project-detail__related-item hover-zoom"
+              >
+                <div class="project-detail__related-image-wrapper">
+                  <img
+                    [src]="related.thumbnailUrl"
+                    [alt]="related.title"
+                    class="project-detail__related-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-detail__related-overlay">
+                  <h3 class="project-detail__related-name">{{ related.title }}</h3>
+                  <p class="project-detail__related-location">{{ related.location }}</p>
+                </div>
+              </a>
+            }
+          </div>
+        </div>
+      </section>
+    }
+  </main>
+} @else {
+  <main class="project-detail project-detail--not-found">
+    <div class="container">
+      <h1>Project Not Found</h1>
+      <p>The project you're looking for doesn't exist.</p>
+      <a routerLink="/portfolio" class="hover-underline">View All Projects</a>
+    </div>
+  </main>
+}

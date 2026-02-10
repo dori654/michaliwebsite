@@ -1,0 +1,26 @@
+<div class="portfolio-grid">
+  @for (project of projects(); track project.id; let i = $index) {
+    <a
+      [routerLink]="['/project', project.id]"
+      class="portfolio-grid__item hover-zoom"
+      [class.portfolio-grid__item--wide]="i % 5 === 0"
+      [class.portfolio-grid__item--tall]="i % 7 === 2"
+    >
+      <div class="portfolio-grid__image-wrapper">
+        <img
+          [src]="project.thumbnailUrl"
+          [alt]="project.title"
+          class="portfolio-grid__image"
+          loading="lazy"
+        />
+      </div>
+      <div class="portfolio-grid__overlay">
+        <span class="portfolio-grid__category text-label">{{ project.category }}</span>
+        <h3 class="portfolio-grid__title">{{ project.title }}</h3>
+        <p class="portfolio-grid__location">{{ project.location }}</p>
+      </div>
+    </a>
+  } @empty {
+    <p class="portfolio-grid__empty">No projects found.</p>
+  }
+</div>

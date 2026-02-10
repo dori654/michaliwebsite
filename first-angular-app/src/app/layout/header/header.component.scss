@@ -1,0 +1,133 @@
+@use 'variables' as *;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  padding: var(--space-md) 0;
+  transition:
+    background-color var(--transition-medium),
+    backdrop-filter var(--transition-medium),
+    padding var(--transition-medium);
+
+  // Solid state (on scroll or menu open)
+  &.header--solid {
+    background-color: rgba(255, 250, 242, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .header__logo-text {
+      color: var(--color-text);
+    }
+
+    .header__menu-line {
+      background-color: var(--color-text);
+    }
+  }
+
+  // Scrolled state (slightly smaller padding)
+  &.header--scrolled {
+    padding: var(--space-sm) 0;
+  }
+}
+
+.header__container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Logo
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  z-index: 1;
+
+  &:hover .header__logo-text {
+    color: var(--color-accent);
+  }
+}
+
+.header__logo-image {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+
+  @include md {
+    width: 50px;
+  }
+}
+
+.header__logo-text {
+  @include heading-style;
+  font-size: var(--text-lg);
+  color: var(--color-text-inverse);
+  transition: color var(--transition-fast);
+
+  @include md {
+    font-size: var(--text-xl);
+  }
+
+  // When header is solid, text changes to dark (handled in header.header--solid)
+}
+
+// Menu Button
+.header__menu-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.header__menu-icon {
+  position: relative;
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__menu-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-inverse);
+  transform-origin: center;
+  transition:
+    transform var(--transition-medium),
+    opacity var(--transition-fast),
+    background-color var(--transition-fast);
+
+  // When header is solid, lines change to dark (handled in header.header--solid)
+}
+
+// Active state (X shape)
+.header__menu-btn--active {
+  .header__menu-line {
+    background-color: var(--color-text-inverse);
+
+    &:first-child {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}

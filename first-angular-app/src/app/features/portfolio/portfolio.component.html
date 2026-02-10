@@ -1,0 +1,37 @@
+<main class="portfolio-page">
+  <!-- Page Header -->
+  <header class="portfolio-page__header">
+    <div class="container">
+      <span class="portfolio-page__label text-label">Our Work</span>
+      <h1 class="portfolio-page__title">Portfolio</h1>
+      <p class="portfolio-page__description">
+        A curated collection of our most distinctive projects, spanning residential,
+        commercial, and hospitality design.
+      </p>
+    </div>
+  </header>
+
+  <!-- Category Filter -->
+  <section class="portfolio-page__filters">
+    <div class="container">
+      <nav class="portfolio-page__filter-nav" aria-label="Project categories">
+        @for (cat of portfolioService.categories; track cat.value) {
+          <button
+            class="portfolio-page__filter-btn"
+            [class.portfolio-page__filter-btn--active]="portfolioService.selectedCategory() === cat.value"
+            (click)="setCategory(cat.value)"
+          >
+            {{ cat.label }}
+          </button>
+        }
+      </nav>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="portfolio-page__grid section">
+    <div class="container">
+      <app-portfolio-grid [projects]="portfolioService.filteredProjects()" />
+    </div>
+  </section>
+</main>

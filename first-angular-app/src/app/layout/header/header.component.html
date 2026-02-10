@@ -1,0 +1,23 @@
+<header [class.header--solid]="themeService.headerSolid()" [class.header--scrolled]="themeService.isScrolled()">
+  <div class="header__container">
+    <!-- Logo -->
+    <a routerLink="/" class="header__logo" (click)="themeService.closeMenu()">
+      <img src="assets/michali-logo.png" alt="Michali" class="header__logo-image" />
+      <span class="header__logo-text">Michali</span>
+    </a>
+
+    <!-- Hamburger Menu Button -->
+    <button
+      class="header__menu-btn"
+      [class.header__menu-btn--active]="themeService.menuOpen()"
+      (click)="themeService.toggleMenu()"
+      [attr.aria-expanded]="themeService.menuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="header__menu-icon">
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+      </span>
+    </button>
+  </div>
+</header>

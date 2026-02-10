@@ -1,0 +1,97 @@
+@use 'variables' as *;
+
+.portfolio-page {
+  padding-top: var(--header-height);
+}
+
+// Page Header
+.portfolio-page__header {
+  padding: var(--space-4xl) 0 var(--space-3xl);
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.portfolio-page__label {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.portfolio-page__title {
+  @include heading-style;
+  font-size: clamp(var(--text-4xl), 8vw, var(--text-5xl));
+  margin: 0 0 var(--space-lg);
+}
+
+.portfolio-page__description {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+// Category Filters
+.portfolio-page__filters {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  position: sticky;
+  top: var(--header-height);
+  z-index: var(--z-sticky);
+}
+
+.portfolio-page__filter-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+
+  @include md {
+    gap: var(--space-lg);
+  }
+}
+
+.portfolio-page__filter-btn {
+  @include label-style;
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: all var(--transition-medium);
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: var(--color-text);
+  }
+
+  &--active {
+    color: var(--color-text);
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+// Projects Grid Section
+.portfolio-page__grid {
+  background-color: var(--color-bg-alt);
+}
