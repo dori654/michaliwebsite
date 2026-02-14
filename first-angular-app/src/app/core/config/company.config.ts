@@ -3,6 +3,7 @@ export const COMPANY_CONFIG = {
   tagline: 'Architecture & Interior Design',
   address: {
     line1: 'BearSheva, Israel', // TODO: Replace with real address
+    line2: '',
     city: 'BeerSheva',
     state: 'IL',
     zip: '80000',

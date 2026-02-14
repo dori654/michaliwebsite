@@ -147,6 +147,7 @@
 .project-detail__description-text {
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
+  white-space: pre-line;
 }
 
 .project-detail__back {

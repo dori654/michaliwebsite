@@ -19,18 +19,18 @@ export class HeroComponent implements OnInit, OnDestroy {
   readonly slides: HeroSlide[] = [
     {
       imageUrl: 'assets/hero/hero1.png',
-      title: 'Designing',
-      subtitle: 'Distinctive Spaces'
+      title: 'Portfolio',
+      subtitle: 'Michal Fourer'
     },
     {
       imageUrl: 'assets/hero/hero2.png',
-      title: 'Crafting',
-      subtitle: 'Timeless Elegance'
+      title: 'Portfolio',
+      subtitle: 'Michal Fourer'
     },
     {
       imageUrl: 'assets/hero/hero4.jpg',
-      title: 'Creating',
-      subtitle: 'Lasting Impressions'
+      title: 'Portfolio',
+      subtitle: 'Michal Fourer'
     }
   ];
 

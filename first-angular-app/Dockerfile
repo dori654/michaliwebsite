@@ -13,8 +13,8 @@ WORKDIR /app
 # Copy only the build output — Angular 21 bundles everything into server.mjs
 COPY --from=build /app/dist/first-angular-app/ ./dist/first-angular-app/
 
-ENV PORT=4000
+ENV PORT=4200
 ENV NODE_ENV=production
-EXPOSE 4000
+EXPOSE 4200
 
 CMD ["node", "dist/first-angular-app/server/server.mjs"]
