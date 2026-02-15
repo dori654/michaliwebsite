@@ -14,7 +14,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2025,
-      description: 'A stunning residential project that combines modern luxury with timeless design. The home features expansive living spaces, floor-to-ceiling windows, and a seamless indoor-outdoor flow that takes full advantage of its desert surroundings.',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/hero/hero1.png',
       heroImageUrl: 'assets/projects/project-1/5_3 - Photo.jpg',
       images: [
@@ -29,10 +29,10 @@ export class PortfolioService {
       id: 'restorant-interior',
       title: 'Urban Restaurant',
       subtitle: 'Culinary Experience',
-      category: 'hospitality',
+      category: 'commercial',
       location: 'MTower ,BeerSheva',
       year: 2025,
-      description: 'A modern restaurant interior that blends contemporary design with warm, inviting textures. The space features a central dining area with custom lighting fixtures.',
+      description: 'בית קפה בעיצוב אורבני בתכנון של קבלן במגדל MTower שביקש לקבל תכנון פנים והדמיות.',
       thumbnailUrl: 'assets/hero/hero2.png',
       heroImageUrl: 'assets/projects/project2/2.jpg',
       images: [
@@ -50,7 +50,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2025,
-      description: 'A luxurious residential project that epitomizes elegance and comfort. The home features a sleek, modern design with an emphasis on indoor-outdoor living, highlighted by a stunning pool area and expansive glass walls that offer breathtaking views of the surrounding landscape.',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/hero/hero4.jpg',
       heroImageUrl: 'assets/projects/project3/1_6 - Photo.jpg',
       images: [
@@ -68,7 +68,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2024,
-      description: 'A sophisticated executive suite that blends modern luxury with functional design. The space features high-end finishes, ergonomic furniture, and a carefully curated aesthetic that reflects both professionalism and comfort.',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/hero/hero3.png',
       heroImageUrl: 'assets/projects/project4/1_1 - Photo.jpg',
       images: [
@@ -85,7 +85,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2024,
-      description: 'A modern residential design that seamlessly blends indoor and outdoor living. The project features clean lines, natural materials, and thoughtful spatial planning to create a harmonious environment.',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/projects/project5/9_2 - Photo.jpg',
       heroImageUrl: 'assets/projects/project5/99_1 - Photo.jpg',
       images: [
@@ -102,7 +102,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2024,
-      description: 'A luxurious interior design project that combines elegance with modern functionality. The space features high-end materials, custom fixtures, and a carefully curated aesthetic that reflects both sophistication and comfort.',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/projects/project6/5-2.jpg',
       heroImageUrl: 'assets/projects/project6/7-2.jpg',
       images: [
@@ -116,10 +116,10 @@ export class PortfolioService {
       id: 'restorant-interior1',
       title: 'Restaurant Interior Design',
       subtitle: 'Bar & Dining Experience',
-      category: 'hospitality',
+      category: 'commercial',
       location: 'Beersheva, Israel',
       year: 2025,
-      description: 'A contemporary restaurant interior design that creates a vibrant and inviting atmosphere. The space features a mix of textures, custom lighting, and a layout that encourages social interaction while providing an intimate dining experience.',
+      description: 'בר מסעדה בעיצוב אורבני בתכנון של קבלן במגדל MTower שביקש לקבל תכנון פנים והדמיות.',
       thumbnailUrl: 'assets/projects/project7/1_5 - Photo.jpg',
       heroImageUrl: 'assets/projects/project7/1_10.jpg',
       images: [
@@ -156,7 +156,7 @@ export class PortfolioService {
       category: 'hospitality',
       location: 'Rishon Lezion, Israel',
       year: 2025,
-      description: 'פרויקט ייחודי באזור שצמוד לתחנת הרכבת לוד גני אביב.\nהמציע שילוב של מגורים,מסחר וגני ילדים. עירוב שימושים נוח אשר ישאיר את הדיירים במתחם וימעיט את הנסיעות לנוחות מירבית וסגירת הסידורים בתחום המתחם.\n\nהמתחם מציע בניין בעל 9 קומות עם קומת מסד של מסחר, קומה ראשונה עם גני ילדים וגינות פרטיות של הגנים, ומעל משרדים ועסקים.\nבניין נוסף עם קומת מסד של מסחר , 22 קומות של מגורים.',
+      description: 'הצטרפות לצוות תיכנון ביה"ח אסותא ראשל"צ , \n ביצוע תכניות תקרה \n פריסות חדרים רטובים \n ביצוע הדמיות ובחירת חומרים לעיצוב מסדרון וקבלת פנים',
       thumbnailUrl: 'assets/projects/project10/2.jpg',
       heroImageUrl: 'assets/projects/project10/1.jpg',
       images: [

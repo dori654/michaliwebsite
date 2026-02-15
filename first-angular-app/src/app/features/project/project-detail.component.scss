@@ -148,6 +148,10 @@
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
   white-space: pre-line;
+
+  &[dir="auto"] {
+    font-family: var(--font-hebrew);
+  }
 }
 
 .project-detail__back {

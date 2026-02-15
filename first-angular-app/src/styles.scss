@@ -17,6 +17,9 @@
 // Lato - Clean sans-serif for body text
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+// Heebo - Modern Hebrew font
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+
 // ============================================
 // CSS RESET / NORMALIZE
 // ============================================
@@ -185,6 +188,12 @@ ul, ol {
 // ============================================
 // SELECTION STYLES
 // ============================================
+
+// Hebrew text styling
+[dir="rtl"],
+[dir="auto"]:lang(he) {
+  font-family: var(--font-hebrew);
+}
 
 ::selection {
   background-color: var(--color-accent);
