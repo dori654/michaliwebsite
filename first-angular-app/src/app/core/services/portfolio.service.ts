@@ -14,7 +14,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2025,
-      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נדל"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/hero/hero1.png',
       heroImageUrl: 'assets/projects/project-1/5_3 - Photo.jpg',
       images: [
@@ -50,7 +50,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2025,
-      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נדל"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/hero/hero4.jpg',
       heroImageUrl: 'assets/projects/project3/1_6 - Photo.jpg',
       images: [
@@ -68,7 +68,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2024,
-      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נדל"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/hero/hero3.png',
       heroImageUrl: 'assets/projects/project4/1_1 - Photo.jpg',
       images: [
@@ -85,7 +85,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2024,
-      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נדל"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/projects/project5/9_2 - Photo.jpg',
       heroImageUrl: 'assets/projects/project5/99_1 - Photo.jpg',
       images: [
@@ -102,7 +102,7 @@ export class PortfolioService {
       category: 'residential',
       location: 'BeerSheva, Israel',
       year: 2024,
-      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נלד"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
+      description: 'עיצוב פנים ותכנון הדמיות ללקוחות שרכשו וילות מחברת נדל"ן בבאר שבע וביקשו לקבל הדמיות ותכנון פנים',
       thumbnailUrl: 'assets/projects/project6/5-2.jpg',
       heroImageUrl: 'assets/projects/project6/7-2.jpg',
       images: [
@@ -156,7 +156,7 @@ export class PortfolioService {
       category: 'hospitality',
       location: 'Rishon Lezion, Israel',
       year: 2025,
-      description: 'הצטרפות לצוות תיכנון ביה"ח אסותא ראשל"צ , \n ביצוע תכניות תקרה \n פריסות חדרים רטובים \n ביצוע הדמיות ובחירת חומרים לעיצוב מסדרון וקבלת פנים',
+      description: 'הצטרפות לצוות תכנון ביה"ח אסותא ראשל"צ , \n ביצוע תכניות תקרה \n פריסות חדרים רטובים \n ביצוע הדמיות ובחירת חומרים לעיצוב מסדרון וקבלת פנים',
       thumbnailUrl: 'assets/projects/project10/2.jpg',
       heroImageUrl: 'assets/projects/project10/1.jpg',
       images: [
