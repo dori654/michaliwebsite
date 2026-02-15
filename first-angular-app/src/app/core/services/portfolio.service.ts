@@ -168,6 +168,28 @@ export class PortfolioService {
         { url: 'assets/projects/project10/7.jpg', alt: 'Above view 3' },
       ]
     },
+            {
+      id: 'bilo',
+      title: 'מרכז מסחרי ביל״ו  ',
+      subtitle: 'מרכז ביל"ו',
+      category: 'commercial',
+      location: 'Billu, Israel',
+      year: 2026,
+      description: 'פרויקט מרכז מסחרי בצומת ביל"ו , בקומה ראשונה יתוכנן סופר טיב טעם שיקבל מחסן שירות גדול, \n מרתף חניות תת קרקעי, \n בקומה הראשונה והשנייה יתוכננו משרדים, וקומת גג מרוצפת לשימוש מסחרי.\n\n פרויקט שהצטרפתי אליו לאדריכל שהוא ראש הצוות שלי, ביצעתי מולו תכנון ושיחות מול יזמים, שיחות זום ומתן מענה מיידי בכל הנוגע לפרויקט.',
+      thumbnailUrl: 'assets/projects/project11/2.jpg',
+      heroImageUrl: 'assets/projects/project11/1.jpg',
+      images: [
+        { url: 'assets/projects/project11/2.jpg', alt: 'Front view' },
+        { url: 'assets/projects/project11/1.jpg', alt: 'Front view' },
+        { url: 'assets/projects/project11/3.png', alt: 'Back view' },
+        { url: 'assets/projects/project11/4.png', alt: 'Street view' },
+        { url: 'assets/projects/project11/5.png', alt: 'Above view' },
+        { url: 'assets/projects/project11/6.png', alt: 'Above view 2' },
+        { url: 'assets/projects/project11/7.png', alt: 'Above view 3' },
+        { url: 'assets/projects/project11/8.png', alt: 'Above view 4' },
+
+      ]
+    },
     {
       id: 'ekron',
       title: ' קריית עקרון - תכנית מגורים',
